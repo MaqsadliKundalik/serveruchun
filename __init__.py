@@ -11,7 +11,6 @@ router = Router()
 
 router.message.register(reyting.get_reyitng_answer, and_f(F.chat.type == "supergroup", F.text == "Reytingni ko'rish"))
 router.message.register(groups.group_message_answer, F.chat.type == "supergroup")
-router.message.register(start.this_block_answer, filters.IsBlockUser())
 # router.message.register(start.referal, and_f(CommandStart(), filters.IsReferal()))
 router.message.register(start.user_sub_channel_message_answer, filters.CheckSubChannel())
 router.message.register(start.user_name_naswer, states.GetUserName.name)
