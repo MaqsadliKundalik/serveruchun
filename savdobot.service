@@ -1,0 +1,13 @@
+[Unit]
+Description=savdo-bot
+
+[Service]
+User=root
+WorkingDirectory=/home/projects/savdo-bot/serveruchun
+ExecStart=/bin/bash -c 'cd /home/projects/savdo-bot/serveruchun && python3 bot.py'
+# optional items below
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
